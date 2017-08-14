@@ -1,0 +1,65 @@
+.F
+======================================================================
+FAIL: Doctest: talkingclock.talking_clock
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/doctest.py", line 2226, in runTest
+    raise self.failureException(self.format_failure(new.getvalue()))
+AssertionError: Failed doctest test for talkingclock.talking_clock
+  File "/home/pmartinez/source/dailyprogrammer/321/easy/talkingclock.py", line 11, in talking_clock
+
+----------------------------------------------------------------------
+File "/home/pmartinez/source/dailyprogrammer/321/easy/talkingclock.py", line 22, in talkingclock.talking_clock
+Failed example:
+    talking_clock("25:00")
+Expected:
+    Traceback (most recent call last):
+    ...
+    ValueError: n must be >= 0
+Got:
+    Traceback (most recent call last):
+      File "/usr/lib64/python2.7/doctest.py", line 1315, in __run
+        compileflags, 1) in test.globs
+      File "<doctest talkingclock.talking_clock[0]>", line 1, in <module>
+        talking_clock("25:00")
+      File "/home/pmartinez/source/dailyprogrammer/321/easy/talkingclock.py", line 53, in talking_clock
+        return "It's {} {}".format(numbers[h], ampm)
+    IndexError: tuple index out of range
+----------------------------------------------------------------------
+File "/home/pmartinez/source/dailyprogrammer/321/easy/talkingclock.py", line 30, in talkingclock.talking_clock
+Failed example:
+    talking_clock("01:30")
+Expected:
+    "It's one thirty am"
+Got:
+    "It's one am"
+----------------------------------------------------------------------
+File "/home/pmartinez/source/dailyprogrammer/321/easy/talkingclock.py", line 33, in talkingclock.talking_clock
+Failed example:
+    talking_clock("12:05")
+Expected:
+    "It's twelve oh five pm"
+Got:
+    "It's twelve pm"
+----------------------------------------------------------------------
+File "/home/pmartinez/source/dailyprogrammer/321/easy/talkingclock.py", line 36, in talkingclock.talking_clock
+Failed example:
+    talking_clock("14:01")
+Expected:
+    "It's two oh one pm"
+Got:
+    "It's two pm"
+----------------------------------------------------------------------
+File "/home/pmartinez/source/dailyprogrammer/321/easy/talkingclock.py", line 39, in talkingclock.talking_clock
+Failed example:
+    talking_clock("20:29")
+Expected:
+    "It's eight twenty nine pm"
+Got:
+    "It's eight pm"
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.005s
+
+FAILED (failures=1)

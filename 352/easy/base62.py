@@ -7,5 +7,5 @@ def encode62(num):
     remaining = num
     while remaining > 0:
         result = ALPHABET[remaining % 62]+ result
-        remaining = int(remaining / 62)
+        remaining = remaining // 62
     return result

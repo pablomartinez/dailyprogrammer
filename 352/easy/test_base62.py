@@ -2,8 +2,8 @@ from base62 import encode62
 
 import unittest
 
-class TestComplexity(unittest.TestCase):
 
+class TestComplexity(unittest.TestCase):
     def test_basic_encode62(self):
         self.assertEqual(encode62(0), '0')
         self.assertEqual(encode62(61), 'Z')

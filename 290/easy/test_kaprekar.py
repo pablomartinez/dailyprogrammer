@@ -1,8 +1,8 @@
 from kaprekar import all_sums, is_kaprekar
 import unittest
 
-class TestKaprekar(unittest.TestCase):
 
+class TestKaprekar(unittest.TestCase):
     def test_all_sums(self):
         self.assertListEqual(all_sums(5), [5])
         self.assertListEqual(all_sums(12), [3, 12])

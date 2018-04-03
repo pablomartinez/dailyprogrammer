@@ -2,8 +2,8 @@ from get3sum import get_3sum
 
 import unittest
 
-class Test3Sum(unittest.TestCase):
 
+class Test3Sum(unittest.TestCase):
     def test_sum1(self):
         n = [4, 5, -1, -2, -7, 2, -5, -3, -7, -3, 1]
         r = get_3sum(n)

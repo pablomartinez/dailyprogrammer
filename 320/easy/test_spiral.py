@@ -2,8 +2,8 @@ from spiral import gen_spiral
 
 import unittest
 
-class TestSpiral(unittest.TestCase):
 
+class TestSpiral(unittest.TestCase):
     def get_lengths(self, s):
         return [len(r) for r in s]
 

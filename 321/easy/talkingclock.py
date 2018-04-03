@@ -8,6 +8,7 @@ https://www.reddit.com/r/dailyprogrammer/comments/6jr76h/20170627_challenge_321_
 "It's twelve am"
 """
 
+
 def talking_clock(time):
     """ Returns a string representing the time
 
@@ -41,27 +42,30 @@ def talking_clock(time):
     hh, mm = time.split(":")
     h = int(hh)
     m = int(mm)
-    numbers = ("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty")
+    numbers = ("one", "two", "three", "four", "five", "six", "seven", "eight",
+               "nine", "ten", "eleven", "twelve", "thirteen", "fourteen",
+               "fifteen", "sixteen", "seventeen", "eighteen", "nineteen",
+               "twenty")
     decimals = ("twenty", "thirty", "forty", "fifty")
     ampm = "am"
-    if h>=12:
+    if h >= 12:
         ampm = "pm"
     h = h % 12
     if h == 0:
         h = 12
-    hh = numbers[h-1]
+    hh = numbers[h - 1]
     mm = ""
     if m > 0:
         d1 = m % 10
         d2 = m / 10
         if m < 10:
-            mm = "oh " + numbers[d1-1]
+            mm = "oh " + numbers[d1 - 1]
         elif m < 20:
-            mm = decimals[d1-1]
+            mm = decimals[d1 - 1]
         else:
-            mm = decimals[d2-2]
+            mm = decimals[d2 - 2]
             if d1 > 0:
-                mm += " " + numbers[d1-1]
+                mm += " " + numbers[d1 - 1]
     if mm:
         mm = " " + mm
     return "It's {}{} {}".format(hh, mm, ampm)

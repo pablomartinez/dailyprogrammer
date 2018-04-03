@@ -2,8 +2,8 @@ from complexity import get_decomposition_sum
 
 import unittest
 
-class TestComplexity(unittest.TestCase):
 
+class TestComplexity(unittest.TestCase):
     def test_complexity(self):
         d = get_decomposition_sum(12345)
         self.assertEqual(d, 838)

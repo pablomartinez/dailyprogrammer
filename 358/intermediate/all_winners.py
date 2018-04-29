@@ -1,12 +1,16 @@
 #!/usr/bin/env python
 
+import os
 import csv
 from collections import defaultdict
 
 
+scores_dir = os.path.dirname(os.path.realpath(__file__))
+scores_file = os.path.join(scores_dir, 'scores.csv')
+
 lost_against = defaultdict(list)
 
-with open('scores.csv', 'rb') as csvfile:
+with open(scores_file, 'rb') as csvfile:
     games = csv.reader(csvfile)
     for game in games:
         if int(game[1]) > int(game[3]):

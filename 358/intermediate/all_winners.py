@@ -10,7 +10,7 @@ scores_file = os.path.join(scores_dir, 'scores.csv')
 
 lost_against = defaultdict(list)
 
-with open(scores_file, 'rb') as csvfile:
+with open(scores_file) as csvfile:
     games = csv.reader(csvfile)
     for game in games:
         if int(game[1]) > int(game[3]):

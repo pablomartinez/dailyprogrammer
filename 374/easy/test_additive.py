@@ -15,3 +15,7 @@ class TestAdditive(unittest.TestCase):
     def test_persistence(self):
         for t in tests:
             self.assertEqual(persistence(t[0]), t[1])
+
+    def test_numerical_persistence(self):
+        for t in tests:
+            self.assertEqual(persistence(t[0]), t[1])

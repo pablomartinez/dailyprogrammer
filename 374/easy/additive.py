@@ -12,6 +12,6 @@ def numerical_persistence(n):
         digits = 0
         while num:
             digits += num%10
-            num = num/10
+            num = num//10
         num = digits
     return count

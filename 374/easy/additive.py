@@ -9,6 +9,7 @@ def numerical_persistence(n):
     count = 0
     while num>9:
         count += 1
+        digits = 0
         while num:
             digits += num%10
             num = num/10

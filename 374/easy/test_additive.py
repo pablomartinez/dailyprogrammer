@@ -1,4 +1,4 @@
-from additive import persistence
+from additive import persistence, numerical_persistence
 
 import unittest
 
@@ -18,4 +18,4 @@ class TestAdditive(unittest.TestCase):
 
     def test_numerical_persistence(self):
         for t in tests:
-            self.assertEqual(persistence(t[0]), t[1])
+            self.assertEqual(numerical_persistence(t[0]), t[1])

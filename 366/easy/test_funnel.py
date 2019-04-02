@@ -1,18 +1,8 @@
-from funnel import funnel
+from funnel import funnel, bonus, load_words
 
 import unittest
 
-tests = [
-  (("leave", "eave"), True),
-  (("reset", "rest"), True),
-  (("dragoon", "dragon"), True),
-  (("eave", "leave"), True),
-  (("sleet", "lets"), False),
-  (("skiff", "ski"), False)
-  ]
-
-
-class TestInrement(unittest.TestCase):
+class TestBasicFunnel(unittest.TestCase):
 
     def test_simple_start(self):
         self.assertTrue(funnel('leave', 'eave'))
@@ -31,3 +21,18 @@ class TestInrement(unittest.TestCase):
 
     def test_removing_multiple(self):
         self.assertFalse(funnel('skiff', 'ski'))
+
+class TestBonusFunnel(unittest.TestCase):
+
+    @classmethod
+    def setUpClass(cls):
+        cls.words = load_words()
+
+    def test_unknown_word(self):
+        self.assertEqual(bonus("affidavit", self.words), [])
+
+    def test_single_word(self):
+        self.assertEqual(bonus("dragoon", self.words), ["dragon"])
+
+    def test_multiple_words(self):
+        self.assertEqual(set(bonus("boats", self.words)), set(["oats", "bats", "bots", "boas", "boat"]))
